@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Image Slide Show</string>
+    <string name="pager_view_layout_image_view">pager view layout image view</string>
+</resources>

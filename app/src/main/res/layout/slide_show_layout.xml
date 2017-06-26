@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Layout File used for the pager view layout-->
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/viewPagerLayout_id"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/view_pager_height"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/imageView_id"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/view_pager_height"
+        android:src="@drawable/angrybirds"
+        android:scaleType="fitXY"
+        android:contentDescription="@string/pager_view_layout_image_view"/>
+
+
+</LinearLayout>
