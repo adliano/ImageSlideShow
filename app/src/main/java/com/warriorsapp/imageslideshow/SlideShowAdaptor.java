@@ -1,6 +1,7 @@
 package com.warriorsapp.imageslideshow;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -19,7 +20,8 @@ public class SlideShowAdaptor extends PagerAdapter
 {
     // private to make sure that this context will be used only in this adaptor
     private Context context;
-    LayoutInflater inflater;
+    private LayoutInflater inflater;
+    static final String IMAGE_POSITION_TAG = "com.warriorsapp.imageslideshow.POS_TAG";
 
     // Array with all images
     // declared public to access it from anywhere on the project
@@ -72,6 +74,12 @@ public class SlideShowAdaptor extends PagerAdapter
         //imageView.setImageResource(images[position]); to slow and heavy use Glide or picasso
 
         Glide.with(context).load(images[position]).into(imageView);
+
+        imageView.setOnClickListener(v -> {
+            Intent intent = new Intent(context,ImageActivity.class);
+            intent.putExtra(IMAGE_POSITION_TAG,position);
+            context.startActivity(intent);
+        });
 
         container.addView(tempView);
 

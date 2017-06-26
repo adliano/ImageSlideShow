@@ -2,8 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           package="com.warriorsapp.imageslideshow">
 
-    <!--android:largeHeap="true" used if need more memory allocation-->
-
+    <!-- android:largeHeap="true" used if need more memory allocation -->
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,6 +16,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
+        </activity>
+        <activity android:name=".ImageActivity">
         </activity>
     </application>
 
